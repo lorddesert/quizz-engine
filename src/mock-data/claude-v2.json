@@ -1,0 +1,262 @@
+[
+  {
+    "id": "q11",
+    "title": "Which famous museum in Paris houses the Mona Lisa?",
+    "choices": ["Musée d'Orsay", "Centre Pompidou", "Louvre Museum", "Musée Rodin"],
+    "correctChoice": "Louvre Museum",
+    "nextQuestion": {
+      "correct": "q12",
+      "incorrect": "q13"
+    },
+    "image": "https://source.unsplash.com/1600x900/?louvre_museum",
+    "description": "Identify the renowned Parisian museum that is home to the Mona Lisa.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q12",
+    "title": "Which of these French authors wrote 'Les Misérables'?",
+    "choices": ["Victor Hugo", "Gustave Flaubert", "Émile Zola", "Alexandre Dumas"],
+    "correctChoice": "Victor Hugo",
+    "nextQuestion": {
+      "correct": "q14",
+      "incorrect": "q13"
+    },
+    "image": "https://source.unsplash.com/1600x900/?les_miserables",
+    "description": "Select the author of the famous French novel 'Les Misérables'.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q13",
+    "title": "Name three famous French authors.",
+    "choices": null,
+    "correctChoice": ["Victor Hugo", "Albert Camus", "Simone de Beauvoir"],
+    "nextQuestion": {
+      "correct": "q14",
+      "incorrect": "q14"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_literature",
+    "description": "Enter the names of three renowned French authors.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q14",
+    "title": "Which of these are traditional French dishes?",
+    "choices": ["Coq au vin", "Ratatouille", "Bouillabaisse", "Fish and chips"],
+    "correctChoice": ["Coq au vin", "Ratatouille", "Bouillabaisse"],
+    "nextQuestion": {
+      "correct": "q15",
+      "incorrect": "q16"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_cuisine",
+    "description": "Select all the dishes that are traditionally French.",
+    "gameMode": "multiple-choice"
+  },
+  {
+    "id": "q15",
+    "title": "What is the name of the famous French cycling race?",
+    "choices": ["Paris-Roubaix", "Tour de France", "Vuelta a España", "Giro d'Italia"],
+    "correctChoice": "Tour de France",
+    "nextQuestion": {
+      "correct": "q17",
+      "incorrect": "q16"
+    },
+    "image": "https://source.unsplash.com/1600x900/?tour_de_france",
+    "description": "Choose the correct name of the renowned French multi-stage bicycle race.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q16",
+    "title": "In which year did the French national football team win their first FIFA World Cup?",
+    "choices": null,
+    "correctChoice": "1998",
+    "nextQuestion": {
+      "correct": "q17",
+      "incorrect": "q17"
+    },
+    "image": "https://source.unsplash.com/1600x900/?france_world_cup",
+    "description": "Enter the year when France first won the FIFA World Cup.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q17",
+    "title": "Which of these are French car manufacturers?",
+    "choices": ["Renault", "Peugeot", "Citroën", "Ferrari"],
+    "correctChoice": ["Renault", "Peugeot", "Citroën"],
+    "nextQuestion": {
+      "correct": "q18",
+      "incorrect": "q19"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_cars",
+    "description": "Select all the car brands that are of French origin.",
+    "gameMode": "multiple-choice"
+  },
+  {
+    "id": "q18",
+    "title": "What is the name of the famous French high-speed rail service?",
+    "choices": ["Eurostar", "TGV", "ICE", "AVE"],
+    "correctChoice": "TGV",
+    "nextQuestion": {
+      "correct": "q20",
+      "incorrect": "q19"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_train",
+    "description": "Choose the correct name of France's high-speed train network.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q19",
+    "title": "What does 'TGV' stand for?",
+    "choices": null,
+    "correctChoice": "Train à Grande Vitesse",
+    "nextQuestion": {
+      "correct": "q20",
+      "incorrect": "q20"
+    },
+    "image": "https://source.unsplash.com/1600x900/?tgv",
+    "description": "Enter the full name that the acronym TGV represents in French.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q20",
+    "title": "Which French city is famous for its annual film festival?",
+    "choices": ["Paris", "Lyon", "Cannes", "Marseille"],
+    "correctChoice": "Cannes",
+    "nextQuestion": {
+      "correct": "q21",
+      "incorrect": "q21"
+    },
+    "image": "https://source.unsplash.com/1600x900/?cannes_film_festival",
+    "description": "Select the French city known for hosting a prestigious international film festival.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q21",
+    "title": "Which of these French scientists discovered radioactivity?",
+    "choices": ["Louis Pasteur", "Marie Curie", "Antoine Lavoisier", "Blaise Pascal"],
+    "correctChoice": "Marie Curie",
+    "nextQuestion": {
+      "correct": "q22",
+      "incorrect": "q23"
+    },
+    "image": "https://source.unsplash.com/1600x900/?radioactivity",
+    "description": "Identify the French scientist who discovered radioactivity.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q22",
+    "title": "What elements did Marie Curie discover?",
+    "choices": ["Radium", "Polonium", "Uranium", "Thorium"],
+    "correctChoice": ["Radium", "Polonium"],
+    "nextQuestion": {
+      "correct": "q24",
+      "incorrect": "q23"
+    },
+    "image": "https://source.unsplash.com/1600x900/?periodic_table",
+    "description": "Select all the elements discovered by Marie Curie.",
+    "gameMode": "multiple-choice"
+  },
+  {
+    "id": "q23",
+    "title": "In which year did Marie Curie win her first Nobel Prize?",
+    "choices": null,
+    "correctChoice": "1903",
+    "nextQuestion": {
+      "correct": "q24",
+      "incorrect": "q24"
+    },
+    "image": "https://source.unsplash.com/1600x900/?nobel_prize",
+    "description": "Enter the year when Marie Curie was awarded her first Nobel Prize.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q24",
+    "title": "Which famous French fashion designer founded the 'House of Chanel'?",
+    "choices": ["Christian Dior", "Yves Saint Laurent", "Coco Chanel", "Louis Vuitton"],
+    "correctChoice": "Coco Chanel",
+    "nextQuestion": {
+      "correct": "q25",
+      "incorrect": "q26"
+    },
+    "image": "https://source.unsplash.com/1600x900/?chanel",
+    "description": "Select the name of the designer who established the iconic Chanel brand.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q25",
+    "title": "Which of these are famous French luxury brands?",
+    "choices": ["Louis Vuitton", "Hermès", "Chanel", "Gucci"],
+    "correctChoice": ["Louis Vuitton", "Hermès", "Chanel"],
+    "nextQuestion": {
+      "correct": "q27",
+      "incorrect": "q26"
+    },
+    "image": "https://source.unsplash.com/1600x900/?luxury_brands",
+    "description": "Select all the luxury brands that are of French origin.",
+    "gameMode": "multiple-choice"
+  },
+  {
+    "id": "q26",
+    "title": "In which year was the French luxury brand Louis Vuitton founded?",
+    "choices": null,
+    "correctChoice": "1854",
+    "nextQuestion": {
+      "correct": "q27",
+      "incorrect": "q27"
+    },
+    "image": "https://source.unsplash.com/1600x900/?louis_vuitton",
+    "description": "Enter the year when Louis Vuitton established his company.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q27",
+    "title": "Which French king was known as the 'Sun King'?",
+    "choices": ["Louis XIV", "Louis XVI", "Napoleon Bonaparte", "Charlemagne"],
+    "correctChoice": "Louis XIV",
+    "nextQuestion": {
+      "correct": "q28",
+      "incorrect": "q29"
+    },
+    "image": "https://source.unsplash.com/1600x900/?versailles",
+    "description": "Identify the French monarch who was famously called the 'Sun King'.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q28",
+    "title": "Which of these palaces were built or significantly expanded by Louis XIV?",
+    "choices": ["Palace of Versailles", "Louvre Palace", "Château de Chambord", "Buckingham Palace"],
+    "correctChoice": ["Palace of Versailles", "Louvre Palace"],
+    "nextQuestion": {
+      "correct": "q30",
+      "incorrect": "q29"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_palaces",
+    "description": "Select all the palaces that Louis XIV had a major role in constructing or expanding.",
+    "gameMode": "multiple-choice"
+  },
+  {
+    "id": "q29",
+    "title": "How long did Louis XIV reign as King of France?",
+    "choices": null,
+    "correctChoice": "72 years",
+    "nextQuestion": {
+      "correct": "q30",
+      "incorrect": "q30"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_monarchy",
+    "description": "Enter the number of years Louis XIV ruled France (in the format 'XX years').",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q30",
+    "title": "Which famous French military and political leader was exiled to the island of Saint Helena?",
+    "choices": ["Charles de Gaulle", "Joan of Arc", "Napoleon Bonaparte", "Louis XVI"],
+    "correctChoice": "Napoleon Bonaparte",
+    "nextQuestion": {
+      "correct": null,
+      "incorrect": null
+    },
+    "image": "https://source.unsplash.com/1600x900/?napoleon",
+    "description": "Select the name of the French leader who was exiled to Saint Helena after his defeat.",
+    "gameMode": "one-choice"
+  }
+]

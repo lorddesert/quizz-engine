@@ -1,0 +1,132 @@
+[
+  {
+    "id": "q1",
+    "title": "What is the capital of France?",
+    "choices": ["London", "Berlin", "Paris", "Madrid"],
+    "correctChoice": "Paris",
+    "nextQuestion": {
+      "correct": "q2",
+      "incorrect": "q3"
+    },
+    "image": "https://source.unsplash.com/1600x900/?paris",
+    "description": "This question tests your knowledge of European capitals.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q2",
+    "title": "Which of these are famous landmarks in Paris?",
+    "choices": ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral", "Big Ben"],
+    "correctChoice": ["Eiffel Tower", "Louvre Museum", "Notre-Dame Cathedral"],
+    "nextQuestion": {
+      "correct": "q4",
+      "incorrect": "q3"
+    },
+    "image": "https://source.unsplash.com/1600x900/?paris_landmarks",
+    "description": "Select all the famous landmarks located in Paris.",
+    "gameMode": "multiple-choice"
+  },
+  {
+    "id": "q3",
+    "title": "In which year was the Eiffel Tower completed?",
+    "choices": null,
+    "correctChoice": "1889",
+    "nextQuestion": {
+      "correct": "q4",
+      "incorrect": "q4"
+    },
+    "image": "https://source.unsplash.com/1600x900/?eiffel_tower",
+    "description": "Enter the year when the construction of the Eiffel Tower was finished.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q4",
+    "title": "Which river runs through Paris?",
+    "choices": ["Thames", "Seine", "Rhine", "Danube"],
+    "correctChoice": "Seine",
+    "nextQuestion": {
+      "correct": "q5",
+      "incorrect": "q6"
+    },
+    "image": "https://source.unsplash.com/1600x900/?seine_river",
+    "description": "Identify the main river that flows through the city of Paris.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q5",
+    "title": "Which of these French artists painted 'The Starry Night'?",
+    "choices": ["Claude Monet", "Pierre-Auguste Renoir", "Vincent van Gogh", "Paul Cézanne"],
+    "correctChoice": "Vincent van Gogh",
+    "nextQuestion": {
+      "correct": "q7",
+      "incorrect": "q6"
+    },
+    "image": "https://source.unsplash.com/1600x900/?starry_night",
+    "description": "Select the artist who created the famous painting 'The Starry Night'.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q6",
+    "title": "Name three famous French painters.",
+    "choices": null,
+    "correctChoice": ["Claude Monet", "Pierre-Auguste Renoir", "Paul Cézanne"],
+    "nextQuestion": {
+      "correct": "q7",
+      "incorrect": "q7"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_painters",
+    "description": "Enter the names of three renowned French painters.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q7",
+    "title": "Which of these are famous French cheeses?",
+    "choices": ["Cheddar", "Brie", "Camembert", "Roquefort", "Gouda"],
+    "correctChoice": ["Brie", "Camembert", "Roquefort"],
+    "nextQuestion": {
+      "correct": "q8",
+      "incorrect": "q9"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_cheese",
+    "description": "Select all the cheeses that are traditionally French.",
+    "gameMode": "multiple-choice"
+  },
+  {
+    "id": "q8",
+    "title": "What is the name of the famous French sparkling wine?",
+    "choices": ["Bordeaux", "Champagne", "Chardonnay", "Merlot"],
+    "correctChoice": "Champagne",
+    "nextQuestion": {
+      "correct": "q10",
+      "incorrect": "q9"
+    },
+    "image": "https://source.unsplash.com/1600x900/?champagne",
+    "description": "Choose the correct name for the renowned French sparkling wine.",
+    "gameMode": "one-choice"
+  },
+  {
+    "id": "q9",
+    "title": "In which year did the French Revolution begin?",
+    "choices": null,
+    "correctChoice": "1789",
+    "nextQuestion": {
+      "correct": "q10",
+      "incorrect": "q10"
+    },
+    "image": "https://source.unsplash.com/1600x900/?french_revolution",
+    "description": "Enter the year when the French Revolution started.",
+    "gameMode": "input-question"
+  },
+  {
+    "id": "q10",
+    "title": "Who was the Emperor of France from 1804 to 1814?",
+    "choices": ["Louis XIV", "Napoleon Bonaparte", "Charles de Gaulle", "François Mitterrand"],
+    "correctChoice": "Napoleon Bonaparte",
+    "nextQuestion": {
+      "correct": "q11",
+      "incorrect": "q11"
+    },
+    "image": "https://source.unsplash.com/1600x900/?napoleon_bonaparte",
+    "description": "Select the name of the French Emperor who ruled from 1804 to 1814.",
+    "gameMode": "one-choice"
+  }
+]
