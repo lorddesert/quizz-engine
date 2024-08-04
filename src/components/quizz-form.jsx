@@ -7,6 +7,7 @@ import Choices from './choices'
 export default function QuizzForm() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   // const [correctChoice, setCorrectChoice] = useState(questionsJSON[0].correctChoice)
+  const [choiceSelected, setChoiceSelected] = useState(false)
 
   function nextQuestion() {
     if (currentQuestion === questionsJSON.length - 1) return
@@ -14,8 +15,9 @@ export default function QuizzForm() {
     setCurrentQuestion(currentQuestion + 1)
   }
 
-  function handleSubmit() {
-    
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(e)
   }
 
   const { title, description, choices, correctChoice } = questionsJSON[currentQuestion]
@@ -32,7 +34,7 @@ export default function QuizzForm() {
           </fieldset>
         </div>
       </div>
-      <button disabled={currentQuestion === questionsJSON.length - 1} onClick={nextQuestion}>Next</button>
+      <button disabled={currentQuestion === questionsJSON.length - 1 || !choiceSelected} onClick={nextQuestion}>Next</button>
     </form>
   )
 }
