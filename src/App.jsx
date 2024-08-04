@@ -1,4 +1,6 @@
 import './App.css'
+
+// Components
 import QuizzForm from './components/quizz-form'
 
 function App() {
