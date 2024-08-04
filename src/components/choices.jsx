@@ -1,12 +1,34 @@
 import Choice from "./choice";
 
-export default function Choices({ choices, questionIndex, correctChoice }) {
+/**
+ * 
+ * @param {{
+ * choices: string[]
+ * }} param0 
+ * @returns React Element
+ */
+export default function Choices({
+  choices,
+  correctChoice,
+  setChoiceSelected,
+  choiceSelected,
+  setScore,
+  score,
+  gamemode = 'one-choice'
+}) {
   return (
-    <ul className="choice-container card">
-      {choices.map(choice => <Choice
-        choice={choice}
-        name={`choice-group-${questionIndex}`}
-        correctChoice={correctChoice}
+    <ul className="choice-container">
+      {choices.map((choice, i) => <Choice
+        key={`choice-${i}`}
+        {...{
+          choice,
+          name: `choices`,
+          correctChoice,
+          setChoiceSelected,
+          choiceSelected,
+          setScore,
+          score
+        }}
       />)}
     </ul>
   )

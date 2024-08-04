@@ -1,14 +1,45 @@
+import { useRef } from "react"
 
-export default function Choice({ choice, name, correctChoice }) {
-  function handleClick() {
-    const input = document.querySelector(`#choice-${choice}`)
+export default function Choice({
+  choice,
+  name,
+  correctChoice,
+  setChoiceSelected,
+  choiceSelected,
+  setScore,
+  score,
+}) {
+  const ref = useRef()
+  function handleClick(e) {
+    if (choiceSelected) return
+
+    const input = ref.current
     const allChoices = document.querySelectorAll('.choice')
-    allChoices.forEach(choice => {
-      console.log(choice.textContent)
-      // if (choice.textContent === correctChoice)
-      //   choice.classList.add('correct')
 
-      // choice.classList.add('incorrect')
+
+    allChoices.forEach((item) => {
+      if (input.value === correctChoice) {
+        setScore(score + 1)
+      }
+
+      if (item.textContent === correctChoice) {
+        item.classList.add('correct')
+      }
+
+      if (item.textContent === choice && choice !== correctChoice) {
+        item.classList.add('incorrect')
+      }
+
+      // if (item.textContent === choice) {
+      //   if (choice === correctChoice)
+      //     item.classList.add('correct')
+      //   else {
+      //     item.classList.add('incorrect')
+
+      //   }
+      // }
+
+      setChoiceSelected(true)
     })
 
     input.checked = true
@@ -16,7 +47,14 @@ export default function Choice({ choice, name, correctChoice }) {
 
   return (
     <li className="choice" onClick={handleClick}>
-      <input type="radio" name={name} id={`choice-${choice}`} />
+      <input
+        type='radio'
+        name={name}
+        disabled={choiceSelected}
+        ref={ref}
+        id={`choice-${choice}`}
+        value={choice}
+      />
       <label htmlFor={`choice-${choice}`}>{choice}</label>
     </li>
   )
