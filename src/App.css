@@ -1,6 +1,131 @@
 #root {
+  --question-width: 450px;
+  --correct: limegreen;
+  --incorrect: crimson;
+
+  --correct-bg: rgba(50, 205, 50, 0.425);
+  --incorrect-bg: rgba(220, 20, 60, 0.404);
+
+
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+
+  accent-color: limegreen;
+}
+
+.card {
+  padding: 8px;
+  border: 1px solid #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.gamemode-selector {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+li.card {
+  transition: 150ms border ease-in;
+}
+
+li.card:hover{
+  border: solid 1px #4d486a
+}
+
+.card label {
+  display: block;
+}
+
+form {
+  width: minmax(350px, 500px);
+
+  legend {
+    text-align: center;
+  }
+}
+
+.questions-container {
+  display: flex;
+  overflow-x: hidden;
+  padding: 10px;
+  width: 100%;
+
+  max-width: var(--question-width);
+}
+
+.question {
+  width: 100%;
+}
+
+.question h4 {
   text-align: center;
+}
+
+
+/* Auxiliar classes */
+.p-0 {
+  padding: 0;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+/* END Auxiliar classes */
+
+.choice {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #333;
+  transition: background-color ease 250ms;
+  border: 1px solid transparent;
+  display: flex;
+  gap: 5px;
+
+}
+
+.choice.correct {
+  border: var(--correct) 1px solid;
+  accent-color: var(--correct);
+  background-color: var(--correct-bg);
+
+  &:hover {
+    background-color: var(--correct-bg);
+  }
+}
+
+.choice.incorrect {
+  
+  border: var(--incorrect) 1px solid;
+  accent-color: var(--incorrect);
+  background-color: var(--incorrect-bg);
+
+  &:hover {
+    background-color: var(--incorrect-bg);
+  }
+}
+
+
+
+.choice label {
+  transition: background-color ease 250ms;
+}
+.choice:hover, .choice label:hover {
+  cursor: pointer;
+}
+.choice:hover {
+  background-color: #4d486a;
+}
+
+.choice:not(:last-child) {
+  margin-bottom: 2px;
 }
