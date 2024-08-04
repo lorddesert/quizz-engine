@@ -1,8 +1,39 @@
-# React + Vite
+# Quizz engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Data structure
 
-Currently, two official plugins are available:
+```Javascript
+const choicesList = {
+  id: '',
+  text: '',
+  choices: [
+    'Carro',
+    'Auto',
+    'Coche',
+    'Caballo'
+  ],
+  // The answer will be the correct string, it needs to makes sense to the user that he's not choosing A or B, but
+  // it's content. Therefore, can be in _any_ given order. 
+  correctChoice: 'Auto', 
+  nextQuestion: {
+    correct: '',
+    incorrect: ''
+  }, //Reference ID of the next question, if it's undefined, then it's the last question
+}
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Questions
+* What should the progress bar do?
+
+Game modes:
+* Multiple choice
+* One choice
+* Input question
+
+each question may have its own
+
+
+## Constraints / points of improvement
+
+* Due to lack of resources, without using an external API, in input questions/answers we have to put in the JSON data the question, and a correct answer to use it as an example, so we can compare the answer of the user.
+  Solution: Using an external API, or a LLM model to see if the answer is good enough can solve this problem.
