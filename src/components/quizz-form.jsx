@@ -122,7 +122,6 @@ export default function QuizzForm() {
   }
 
   if (hasFinished) {
-    // TODO: end of game, score screen!
     return (
       <div className="card">
         <h1>You finished!</h1>
