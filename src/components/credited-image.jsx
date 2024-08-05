@@ -1,4 +1,6 @@
 import { Suspense } from "react";
+
+// Components
 import SkeletonCreditedImage from "./skeleton-credited-image";
 
 export default function CreditedImage({ user, urls }) {
