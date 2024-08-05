@@ -41,8 +41,7 @@ li.card:hover {
 }
 
 form {
-  width: minmax(350px, 600px);
-
+  width: 500px;
   legend {
     text-align: center;
   }
@@ -54,7 +53,9 @@ form {
   padding: 10px;
 
   /* max-width: var(--question-width); */
-  max-width: 500px
+  /* max-width: 500px;
+  min-width: 350px;
+  width: minmax(350px, 500px); */
 }
 
 .question {
@@ -134,6 +135,7 @@ textarea {
   bottom: 8px;
   padding: 10px;
 
+  border: 1px solid var(--choice-bg-hover);
 }
 
 
@@ -161,8 +163,12 @@ textarea {
 /* END Auxiliar classes */
 
 
-@media (max-width: 768px) {
+@media (max-width: 550px) {
   #root {
     padding: 2rem 0;
+  }
+
+  form {
+    width: auto;
   }
 }
