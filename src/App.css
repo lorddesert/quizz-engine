@@ -10,13 +10,11 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
-  accent-color: limegreen;
 }
 
 .card {
   padding: 8px;
-  border: 1px solid #333;
+  border-radius: 7px;
 }
 
 ul {
@@ -34,8 +32,8 @@ li.card {
   transition: 150ms border ease-in;
 }
 
-li.card:hover{
-  border: solid 1px #4d486a
+li.card:hover {
+  border: solid 1px var(--choice-bg);
 }
 
 .card label {
@@ -43,7 +41,7 @@ li.card:hover{
 }
 
 form {
-  width: minmax(350px, 500px);
+  width: minmax(350px, 600px);
 
   legend {
     text-align: center;
@@ -54,38 +52,20 @@ form {
   display: flex;
   overflow-x: hidden;
   padding: 10px;
-  width: 100%;
 
-  max-width: var(--question-width);
+  /* max-width: var(--question-width); */
+  max-width: 500px
 }
 
 .question {
   width: 100%;
 }
 
-.question h4 {
-  text-align: center;
-}
-
-
-/* Auxiliar classes */
-.p-0 {
-  padding: 0;
-}
-
-.m-0 {
-  margin: 0;
-}
-
-.text-center {
-  text-align: center;
-}
-/* END Auxiliar classes */
-
 .choice {
   padding: 10px;
   border-radius: 12px;
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: var(--choice-bg);
   transition: background-color ease 250ms;
   border: 1px solid transparent;
   display: flex;
@@ -104,7 +84,7 @@ form {
 }
 
 .choice.incorrect {
-  
+
   border: var(--incorrect) 1px solid;
   accent-color: var(--incorrect);
   background-color: var(--incorrect-bg);
@@ -119,13 +99,70 @@ form {
 .choice label {
   transition: background-color ease 250ms;
 }
-.choice:hover, .choice label:hover {
+
+.choice:hover,
+.choice label:hover {
   cursor: pointer;
 }
+
 .choice:hover {
-  background-color: #4d486a;
+  background-color: var(--choice-bg-hover);
 }
 
 .choice:not(:last-child) {
   margin-bottom: 2px;
+}
+
+.llm-response {
+  max-width: 45ch;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+#quizz-progress {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.toast {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  padding: 10px;
+
+}
+
+
+/* Auxiliar classes */
+.p-0 {
+  padding: 0;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.box-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* END Auxiliar classes */
+
+
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem 0;
+  }
 }
