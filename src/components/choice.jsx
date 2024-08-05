@@ -8,6 +8,7 @@ export default function Choice({
   choiceSelected,
   setScore,
   score,
+  setAnswerWasCorrect
 }) {
   const ref = useRef()
   function handleClick(e) {
@@ -20,6 +21,7 @@ export default function Choice({
     allChoices.forEach((item) => {
       if (input.value === correctChoice) {
         setScore(score + 1)
+        setAnswerWasCorrect(true)
       }
 
       if (item.textContent === correctChoice) {
