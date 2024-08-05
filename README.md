@@ -2,6 +2,16 @@
 
 ## Data structure
 
+## Important notes:
+
+This app in order to work correctly, you _need_ to use a chromium-based web browser, since it uses AI to answer input-type questions.
+
+
+## TODO
+* [] Multiple choice is not working properly when giving the points.
+* [] Multiple choice is not disabling the submit button.
+* [] Input questions are not answering correctly.
+
 ```Javascript
 const choicesList = {
   id: '',
