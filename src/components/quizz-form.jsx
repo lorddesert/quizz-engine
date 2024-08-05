@@ -29,7 +29,54 @@ export default function QuizzForm() {
     e.preventDefault()
   }
 
-  const { title, description, choices, correctChoice } = questionsJSON[currentQuestion]
+  function handleMultipleChoiceClick() {
+    const allChoices = document.querySelectorAll('.choice')
+    const checkedChoices = [...allChoices]
+      .filter(choice => choice.children[0].checked)
+      .map(choice => choice.children[0].value)
+
+    setChoiceSelected(true)
+    
+    if (!checkedChoices.length) {
+      setChoiceSelected(false)
+      return
+    }
+
+    allChoices.forEach(el => {
+      if (correctChoice.includes(el.children[0].value))
+        el.classList.add('correct')
+      else if (el.children[0].checked)
+        el.classList.add('incorrect')
+    })
+
+    if (checkedChoices.length !== correctChoice.length) return
+
+    let correctUserChoiceCount = 0
+
+    checkedChoices.forEach(choice => {
+      if (correctChoice.includes(choice))
+        correctUserChoiceCount++
+    })
+
+    if (correctUserChoiceCount === correctChoice.length) {
+      setScore(score + 1)
+    }
+  }
+
+  async function handleInputQuestion() {
+    const userAnswer = document.querySelector('#answer').value
+
+    const result = await verifyInputQuestion(title, userAnswer, setLoadingLLM)
+    const message = result.choices[0].message.content
+    console.log(result.choices[0].message.content)
+    setLLMResponse(message)
+    setChoiceSelected(true)
+
+    if (result.choices[0].message.content === "True") {
+      setScore(score + 1)
+    }
+  }
+
 
   return (
     <form onSubmit={handleSubmit} className="card">
