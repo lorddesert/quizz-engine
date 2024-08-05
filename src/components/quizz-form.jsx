@@ -118,6 +118,7 @@ export default function QuizzForm() {
     setLLMResponse('')
     setChoiceSelected(false)
     setHasFinised(false)
+    setScore(0)
   }
 
   if (hasFinished) {
