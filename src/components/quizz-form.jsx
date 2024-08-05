@@ -1,5 +1,6 @@
 import { useState } from "react"
-import questionsJSON from '../mock-data/claude-v2.json'
+import questionsJSON from '../mock-data/claude-v3.json'
+
 // Components
 import Choices from './choices'
 import Navigation from "./navigation"
@@ -15,7 +16,15 @@ export default function QuizzForm() {
   const [LLMResponse, setLLMResponse] = useState('')
   const [answerWasCorrect, setAnswerWasCorrect] = useState(false)
   const [hasFinished, setHasFinised] = useState(false)
-  const { title = '', description = '', choices = [], correctChoice = [], gameMode = '', image = '' } = questionsJSON[currentQuestion] || {}
+  const {
+    title = '',
+    description = '',
+    choices = [],
+    correctChoice = [],
+    gameMode = '',
+    image = '',
+    question = ''
+  } = questionsJSON[currentQuestion] || {}
 
   function nextQuestion() {
     if (currentQuestion === questionsJSON.length - 1) {
@@ -47,8 +56,6 @@ export default function QuizzForm() {
 
     setAnswerWasCorrect(false)
 
-    // setCurrentQuestion(currentQuestion + 1)
-    console.log(nextQuestion)
     setCurrentQuestion(nextQuestion)
   }
 
@@ -97,7 +104,7 @@ export default function QuizzForm() {
 
     setChoiceSelected(true)
 
-    const result = await verifyInputQuestion(title, userAnswer, setLoadingLLM)
+    const result = await verifyInputQuestion(question, userAnswer, setLoadingLLM)
     const message = result.choices[0].message.content
     setLLMResponse(message)
 
@@ -141,7 +148,8 @@ export default function QuizzForm() {
               <progress id="quizz-progress" max={questionsJSON.length} value={currentQuestion} />
               <span className="text-center">Score: {score}</span>
             </div>
-            <h4>{title}</h4>
+            <h3>{title}</h3>
+            <h4>{question}</h4>
             <CreditedImage image={image} />
             {gameMode === GAMEMODES.INPUT_QUESTION
               ? <>
@@ -158,7 +166,8 @@ export default function QuizzForm() {
                     choiceSelected,
                     setScore,
                     score,
-                    gamemode: gameMode
+                    gamemode: gameMode,
+                    setAnswerWasCorrect
                   }}
                 />
 
@@ -186,8 +195,7 @@ export default function QuizzForm() {
           }
         } />
       </form>
-      {loadingLLM && <span className="llm-response toast card box-shadow">{loadingLLM}</span>
-      }
+      {loadingLLM && <span className="llm-response toast card">{loadingLLM}</span>}
     </>
   )
 }
