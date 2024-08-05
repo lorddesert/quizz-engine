@@ -4,13 +4,6 @@ import { GAMEMODES } from '../utils'
 import Choice from "./choice";
 import MultipleChoice from "./multiple-choice";
 
-/**
- * 
- * @param {{
- * choices: string[]
- * }} param0 
- * @returns React Element
- */
 export default function Choices({
   choices,
   correctChoice,
@@ -20,7 +13,8 @@ export default function Choices({
   score,
   gamemode,
   answer,
-  setAnswer
+  setAnswer,
+  setAnswerWasCorrect
 }) {
 
   if (gamemode === GAMEMODES.ONE_CHOICE)
@@ -35,7 +29,8 @@ export default function Choices({
             setChoiceSelected,
             choiceSelected,
             setScore,
-            score
+            score,
+            setAnswerWasCorrect
           }}
         />)}
       </ul>
