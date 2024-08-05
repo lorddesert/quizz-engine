@@ -3,13 +3,16 @@ import { useRef } from "react"
 export default function MultipleChoice({
   choice,
   name,
+  choiceSelected,
 }) {
   const ref = useRef()
 
   function handleClick(e) {
-    const input = ref.current
+    if (choiceSelected) return
     
-    input.checked = true
+    const input = ref.current
+
+    input.checked = !input.checked
   }
 
   return (
