@@ -154,7 +154,6 @@ export default function QuizzForm() {
             choiceSelected,
             setScore,
             score,
-            gameMode,
             setAnswerWasCorrect,
             description
           }}
