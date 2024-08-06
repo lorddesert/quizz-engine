@@ -11,7 +11,7 @@ export default function Choice({
   setAnswerWasCorrect
 }) {
   const ref = useRef()
-  function handleClick(e) {
+  function handleClick() {
     if (choiceSelected) return
 
     const input = ref.current
