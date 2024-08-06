@@ -17,7 +17,6 @@ export default function Choice({
     const input = ref.current
     const allChoices = document.querySelectorAll('.choice')
 
-
     allChoices.forEach((item) => {
       if (input.value === correctChoice) {
         setScore(score + 1)
@@ -31,15 +30,6 @@ export default function Choice({
       if (item.textContent === choice && choice !== correctChoice) {
         item.classList.add('incorrect')
       }
-
-      // if (item.textContent === choice) {
-      //   if (choice === correctChoice)
-      //     item.classList.add('correct')
-      //   else {
-      //     item.classList.add('incorrect')
-
-      //   }
-      // }
 
       setChoiceSelected(true)
     })
