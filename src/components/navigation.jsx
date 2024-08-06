@@ -72,12 +72,12 @@ export default function Navigation({
 
   return (
     <Button
-    disabled={
-      currentQuestion === questions.length
-      || !choiceSelected
-    } onClick={nextQuestion}
-  >
-    Next
-  </Button>
+      disabled={
+        currentQuestion === questions.length
+        || !choiceSelected
+      } onClick={nextQuestion}
+    >
+      Next
+    </Button>
   )
 }
