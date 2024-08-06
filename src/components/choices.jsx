@@ -19,7 +19,7 @@ export default function Choices({
 
   if (gamemode === GAMEMODES.ONE_CHOICE)
     return (
-      <ul className="choice-container">
+      <ul>
         {choices.map((choice, i) => <Choice
           key={`choice-${i}`}
           {...{
@@ -38,7 +38,7 @@ export default function Choices({
 
   if (gamemode === GAMEMODES.MULTIPLE_CHOICE)
     return (
-      <ul className="choice-container">
+      <ul>
         {choices.map((choice, i) => <MultipleChoice
           key={`choice-${i}`}
           {...{
