@@ -20,7 +20,7 @@ export default function CreditedImage() {
     <>
       {photo 
       ? <div className="question-photo-container">
-        <img className="photo" src={photo} alt="Random image" />
+        <img src={photo} alt="Random image" />
       </div>
       : <SkeletonCreditedImage />}
     </>
