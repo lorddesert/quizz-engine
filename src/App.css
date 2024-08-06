@@ -121,6 +121,7 @@ textarea {
   padding: 10px;
 
   border: 1px solid var(--choice-bg-hover);
+  background-color: var(--choice-bg);
 }
 
 .question-photo-container {
