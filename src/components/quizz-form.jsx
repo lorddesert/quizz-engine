@@ -2,11 +2,12 @@ import { useState } from "react"
 import questionsJSON from '../mock-data/claude-v3.json'
 
 // Components
-import Choices from './choices'
 import Navigation from "./navigation"
-import { GAMEMODES, verifyInputQuestion } from "../utils"
+import { verifyInputQuestion } from "../utils"
 import Button from "./button"
 import CreditedImage from "./credited-image"
+import QuizzProgress from "./quizz-progress"
+import QuizzInputs from "./quizz-inputs"
 
 export default function QuizzForm() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -16,6 +17,7 @@ export default function QuizzForm() {
   const [LLMResponse, setLLMResponse] = useState('')
   const [answerWasCorrect, setAnswerWasCorrect] = useState(false)
   const [hasFinished, setHasFinised] = useState(false)
+
   const {
     title = '',
     description = '',
@@ -55,13 +57,7 @@ export default function QuizzForm() {
     })
 
     setAnswerWasCorrect(false)
-
     setCurrentQuestion(nextQuestion)
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault()
-    console.log('submit')
   }
 
   function handleMultipleChoiceClick() {
@@ -140,48 +136,30 @@ export default function QuizzForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="card box-shadow">
-        <div className="questions-container">
-          <div className="question">
-            <div style={{ display: 'grid' }}>
-              <label htmlFor="quizz-progress"></label>
-              <progress id="quizz-progress" max={questionsJSON.length} value={currentQuestion} />
-              <span className="text-center">Score: {score}</span>
-            </div>
-            <h3>{title}</h3>
-            <h4>{question}</h4>
-            <CreditedImage image={image} />
-            {gameMode === GAMEMODES.INPUT_QUESTION
-              ? <>
-                <textarea rows={10} placeholder="Your answer..." style={{ width: '100%' }} name="answer" id="answer"></textarea>
-                <span className="llm-response">Is correct: {LLMResponse}</span>
-              </>
-              :
-              <fieldset>
-                <Choices
-                  {...{
-                    choices,
-                    correctChoice,
-                    setChoiceSelected,
-                    choiceSelected,
-                    setScore,
-                    score,
-                    gamemode: gameMode,
-                    setAnswerWasCorrect
-                  }}
-                />
+      <form onSubmit={(e) => e.preventDefault()} className="card box-shadow">
+        <QuizzProgress max={questionsJSON.length} value={currentQuestion} />
+        <hgroup>
+          <h3>{title}</h3>
+          <h4>{question}</h4>
+        </hgroup>
+        <CreditedImage image={image} />
 
-                {gameMode === GAMEMODES.INPUT_QUESTION && <>
-                  <textarea style={{ width: '100%' }} name="answer" id="answer"></textarea>
-                  <span className="llm-response">Is correct: {LLMResponse}</span>
-                </>
-                }
+        <QuizzInputs
+          {...{
+            gameMode,
+            LLMResponse,
+            choices,
+            correctChoice,
+            setChoiceSelected,
+            choiceSelected,
+            setScore,
+            score,
+            gameMode,
+            setAnswerWasCorrect,
+            description
+          }}
+        />
 
-                <legend>{description}</legend>
-              </fieldset>
-            }
-          </div>
-        </div>
         <Navigation {
           ...{
             currentQuestion,
