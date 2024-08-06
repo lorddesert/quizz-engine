@@ -77,15 +77,5 @@ export default function Navigation({
   >
     Next
   </Button>
-    // <button disabled={
-    //   currentQuestion === questions.length - 1
-    //   || !choiceSelected
-    // } onClick={nextQuestion}
-    //   style={{
-    //     width: '100%'
-    //   }}
-    // >
-    //   Next
-    // </button>
   )
 }
