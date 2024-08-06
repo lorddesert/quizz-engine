@@ -1,4 +1,6 @@
 import { GAMEMODES } from "../utils";
+
+// Components
 import Button from "./button";
 
 export default function Navigation({
