@@ -142,7 +142,7 @@ export default function QuizzForm() {
           <h3>{title}</h3>
           <h4>{question}</h4>
         </hgroup>
-        <CreditedImage image={image} />
+        <CreditedImage image={image} id={questionsJSON[currentQuestion].id} />
 
         <QuizzInputs
           {...{
@@ -159,18 +159,20 @@ export default function QuizzForm() {
           }}
         />
 
-        <Navigation {
-          ...{
-            currentQuestion,
-            nextQuestion,
-            questions: questionsJSON,
-            choiceSelected,
-            gamemode: gameMode,
-            handleMultipleChoiceClick,
-            handleInputQuestion,
-            LLMResponse
-          }
-        } />
+        <div style={{ marginTop: '10px' }}>
+          <Navigation {
+            ...{
+              currentQuestion,
+              nextQuestion,
+              questions: questionsJSON,
+              choiceSelected,
+              gamemode: gameMode,
+              handleMultipleChoiceClick,
+              handleInputQuestion,
+              LLMResponse
+            }
+          } />
+        </div>
       </form>
       {loadingLLM && <span className="llm-response toast card">{loadingLLM}</span>}
     </>
