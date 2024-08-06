@@ -1,6 +1,11 @@
 import { useState } from "react"
 
-export default function Button({ children, onClick, disabled = false, fallback }) {
+export default function Button({
+  children,
+  onClick,
+  disabled = false,
+  fallback
+}) {
   const [loading, setIsLoading] = useState(false)
 
   async function handleClick() {
